@@ -34,6 +34,16 @@ const Chat = () => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chat.messages]);
 
+  useEffect(() => {
+    const unSub = onSnapshot(doc(db, "chats", chatId), (res) => {
+      setChat(res.data());
+    });
+
+    return () => {
+      unSub();
+    };
+  }, [chatId]);
+
   const handleEmoji = (e) => {
     setText((prev) => prev + e.emoji);
     setOpen(false);
