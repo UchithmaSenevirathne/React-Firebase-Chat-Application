@@ -18,7 +18,7 @@ import { format } from "timeago.js";
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
-  const [chat, setChat] = useState();
+  const [chat, setChat] = useState(null);
   const [img, setImg] = useState({
     file: null,
     url: "",
@@ -30,11 +30,17 @@ const Chat = () => {
 
   const endRef = useRef(null);
 
+  // useEffect(() => {
+  //   endRef.current?.scrollIntoView({ behavior: "smooth" });
+  // }, [chat.messages]);
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [chat.messages]);
+    if (chat?.messages) {
+      endRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chat]);
 
   useEffect(() => {
+    if (!chatId) return;
     const unSub = onSnapshot(doc(db, "chats", chatId), (res) => {
       setChat(res.data());
     });
