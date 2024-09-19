@@ -7,7 +7,13 @@ import { db } from "../../../lib/firebase";
 import { useChatStore } from "../../../lib/chatStore";
 
 const ChatList = () => {
-  const [addMode, setAddMode] = useState(false)
+  const [chats, setChats] = useState([]);
+  const [addMode, setAddMode] = useState(false);
+  const [input, setInput] = useState("");
+
+  const { currentUser } = useUserStore();
+  const { chatId, changeChat } = useChatStore();
+
   return (
     <div className='chatList'>
       <div className="search">
