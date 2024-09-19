@@ -25,6 +25,11 @@ const Detail = () => {
     }
   };
 
+  const handleLogout = () => {
+    auth.signOut();
+    resetChat()
+  };
+
   return (
     <div className="detail">
       <div className="user">
