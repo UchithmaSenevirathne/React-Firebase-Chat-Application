@@ -17,7 +17,6 @@
 .chatList {
   flex: 1;
   overflow-y: scroll;
-
   .search {
     display: flex;
     align-items: center;
@@ -65,26 +64,26 @@
     cursor: pointer;
     border-bottom: 1px solid #dddddd35;
 
-    img{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
-    .texts{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-        span{
-            font-weight: 500;
-        }
+      span {
+        font-weight: 500;
+      }
 
-        p{
-            font-size: 14px;
-            font-weight: 300;
-        }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+      }
     }
   }
 }
