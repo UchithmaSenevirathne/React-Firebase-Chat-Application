@@ -34,10 +34,10 @@ const Login = () => {
 
     const {username, email, password} = Object.fromEntries(formData);
 
-    console.log(username)
-
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
+
+      const imgUrl = await upload(avatar.file);
 
       await setDoc(doc(db, "users", res.user.uid), {
         username,
