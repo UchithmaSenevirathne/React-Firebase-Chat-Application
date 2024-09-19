@@ -27,16 +27,16 @@ const App = () => {
 
   return (
     <div className="container">
-      {user ? (
+      {currentUser ? (
         <>
           <List />
-          <Chat />
-          <Detail />
+          {chatId && <Chat />}
+          {chatId && <Detail />}
         </>
       ) : (
         <Login />
       )}
-      <Notification/>
+      <Notification />
     </div>
   );
 };
