@@ -18,6 +18,7 @@ import { format } from "timeago.js";
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
+  const [chat, setChat] = useState();
 
   const endRef = useRef(null);
 
