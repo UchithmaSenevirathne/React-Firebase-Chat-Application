@@ -29,7 +29,78 @@ const Chat = () => {
           <img src="./info.png" alt="" />
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <img src="https://images.pexels.com/photos/27745133/pexels-photo-27745133/free-photo-of-green-big-leaves-of-plant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              iste aspernatur odit explicabo neque quo non blanditiis. Officia
+              ut nulla aliquam quos quam tempora, quibusdam similique quia
+              voluptatem, explicabo ducimus.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+      </div>
       <div className="bottom">
         <div className="icons">
           <img src="./img.png" alt="" />
