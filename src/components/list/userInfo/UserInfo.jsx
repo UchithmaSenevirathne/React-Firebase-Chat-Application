@@ -3,6 +3,8 @@ import "./userInfo.css"
 import { useUserStore } from "../../../lib/userStore";
 
 const UserInfo = () => {
+  const { currentUser } = useUserStore();
+  
   return (
     <div className='userInfo'>
       <div className="user">
