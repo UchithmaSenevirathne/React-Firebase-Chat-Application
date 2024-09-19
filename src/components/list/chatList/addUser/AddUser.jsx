@@ -34,11 +34,17 @@ const AddUser = () => {
       if (!querySnapShot.empty) {
         setUser(querySnapShot.docs[0].data());
       }
-      
+
     } catch (err) {
       console.log(err);
     }
   }
+
+  const handleAdd = async () => {
+    const chatRef = collection(db, "chats");
+    const userChatsRef = collection(db, "userchats");
+  }
+
   return (
     <div className='addUser'>
         <form>
