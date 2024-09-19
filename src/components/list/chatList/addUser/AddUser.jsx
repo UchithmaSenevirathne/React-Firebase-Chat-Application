@@ -18,6 +18,7 @@ import { useUserStore } from "../../../../lib/userStore";
 
 const AddUser = () => {
   const [user, setUser] = useState(null);
+  const { currentUser } = useUserStore();
   return (
     <div className='addUser'>
         <form>
