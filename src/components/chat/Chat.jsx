@@ -49,7 +49,14 @@ const Chat = () => {
     setOpen(false);
   };
 
-  console.log(text);
+  const handleImg = (e) => {
+    if (e.target.files[0]) {
+      setImg({
+        file: e.target.files[0],
+        url: URL.createObjectURL(e.target.files[0]),
+      });
+    }
+  };
 
   return (
     <div className="chat">
