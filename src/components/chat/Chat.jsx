@@ -27,11 +27,12 @@ const Chat = () => {
   const { currentUser } = useUserStore();
   const { chatId, user, isCurrentUserBlocked, isReceiverBlocked } =
     useChatStore();
+
   const endRef = useRef(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({behavior: "smooth"});
-  })
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chat.messages]);
 
   const handleEmoji = (e) => {
     setText((prev) => prev + e.emoji);
