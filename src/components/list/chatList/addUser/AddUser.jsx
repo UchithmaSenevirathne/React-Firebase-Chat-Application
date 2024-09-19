@@ -76,18 +76,20 @@ const AddUser = () => {
   }
 
   return (
-    <div className='addUser'>
-        <form>
-            <input type="text" placeholder='Username' name='username'/>
-            <button>Search</button>
-        </form>
+    <div className="addUser">
+      <form onSubmit={handleSearch}>
+        <input type="text" placeholder="Username" name="username" />
+        <button>Search</button>
+      </form>
+      {user && (
         <div className="user">
-            <div className="detail">
-                <img src="./avatar.png" alt="" />
-                <span>Jane Doe</span>
-            </div>
-            <button>Add User</button>
+          <div className="detail">
+            <img src={user.avatar || "./avatar.png"} alt="" />
+            <span>{user.username}</span>
+          </div>
+          <button onClick={handleAdd}>Add User</button>
         </div>
+      )}
     </div>
   )
 }
