@@ -17,6 +17,7 @@ import { useState } from "react";
 import { useUserStore } from "../../../../lib/userStore";
 
 const AddUser = () => {
+  const [user, setUser] = useState(null);
   return (
     <div className='addUser'>
         <form>
