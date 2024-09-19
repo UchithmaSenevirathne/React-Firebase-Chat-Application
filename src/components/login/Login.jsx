@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { toast } from "react-toastify";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,  signInWithEmailAndPassword,} from "firebase/auth";
 import { auth, db } from "../../lib/firebase";
 import {doc, setDoc} from 'firebase/firestore'
 
