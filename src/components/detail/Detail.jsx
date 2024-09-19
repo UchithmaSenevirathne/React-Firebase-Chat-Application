@@ -6,6 +6,10 @@ import { auth, db } from "../../lib/firebase";
 import { useUserStore } from "../../lib/userStore";
 
 const Detail = () => {
+  const { chatId, user, isCurrentUserBlocked, isReceiverBlocked, changeBlock, resetChat } =
+    useChatStore();
+  const { currentUser } = useUserStore();
+  
   return (
     <div className="detail">
       <div className="user">
