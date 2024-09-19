@@ -21,7 +21,9 @@ const AddUser = () => {
   const { currentUser } = useUserStore();
 
   const handleSearch = async (e) => {
-    
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const username = formData.get("username");
   }
   return (
     <div className='addUser'>
