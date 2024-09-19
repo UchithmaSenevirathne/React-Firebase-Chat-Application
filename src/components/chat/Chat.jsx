@@ -58,6 +58,30 @@ const Chat = () => {
     }
   };
 
+  const handleSend = async () => {
+    if (text === "") return;
+
+    let imgUrl = null;
+
+    try{
+      if (img.file) {
+        imgUrl = await upload(img.file);
+      }
+
+      await updateDoc(doc(db, "chats", chatId), {
+        messages: arrayUnion({
+          senderId: currentUser.id,
+          text,
+          createdAt: new Date(),
+          ...(imgUrl && { img: imgUrl }),
+        }),
+      });
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <div className="chat">
       <div className="top">
