@@ -19,7 +19,14 @@ const Chat = () => {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
   const [chat, setChat] = useState();
+  const [img, setImg] = useState({
+    file: null,
+    url: "",
+  });
 
+  const { currentUser } = useUserStore();
+  const { chatId, user, isCurrentUserBlocked, isReceiverBlocked } =
+    useChatStore();
   const endRef = useRef(null);
 
   useEffect(() => {
