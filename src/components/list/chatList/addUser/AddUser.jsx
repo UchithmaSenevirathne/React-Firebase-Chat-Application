@@ -24,6 +24,14 @@ const AddUser = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const username = formData.get("username");
+
+    try{
+      const userRef = collection(db, "users");
+      const q = query(userRef, where("username", "==", username));
+      
+    } catch (err) {
+      console.log(err);
+    }
   }
   return (
     <div className='addUser'>
