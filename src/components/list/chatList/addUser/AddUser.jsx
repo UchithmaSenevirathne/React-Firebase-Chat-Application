@@ -47,6 +47,11 @@ const AddUser = () => {
     try{
       const newChatRef = doc(chatRef);
 
+      await setDoc(newChatRef, {
+        createdAt: serverTimestamp(),
+        messages: [],
+      });
+
     } catch (err) {
       console.log(err);
     }
