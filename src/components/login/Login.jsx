@@ -25,6 +25,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
   };
 
   const handleRegister = async (e) => {
