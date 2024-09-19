@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
-import "./chatList.css"
-import AddUser from './addUser/AddUser'
+import { useEffect, useState } from "react";
+import "./chatList.css";
+import AddUser from "./addUser/addUser";
+import { useUserStore } from "../../../lib/userStore";
+import { doc, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
+import { db } from "../../../lib/firebase";
+import { useChatStore } from "../../../lib/chatStore";
 
 const ChatList = () => {
   const [addMode, setAddMode] = useState(false)
